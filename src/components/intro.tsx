@@ -9,9 +9,11 @@ import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -79,12 +81,16 @@ export default function Intro() {
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition duration-300 hover:scale-105 hover:bg-gray-950 focus:scale-105 active:scale-95"
           aria-label="contact me button"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact Me Here{" "}
           <BsArrowRight className="opacity-70 transition duration-200 group-hover:translate-x-1" />
         </Link>
         <a
-          className="group flex items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
+          className="group flex items-center gap-2 rounded-full borderBlack bg-white px-7 py-3 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
           href="/kaidenCV.pdf"
           download
           aria-label="download cv button"
@@ -93,7 +99,7 @@ export default function Intro() {
           <HiDownload className="opacity-70 transition duration-200 group-hover:translate-y-1" />
         </a>
         <a
-          className="flex items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
+          className="flex items-center gap-2 rounded-full borderBlack bg-white p-4 text-gray-700 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
           href="https://linkedin.com/in/kaiden-riley"
           target="_blank"
           title="LinkedIn"
@@ -102,7 +108,7 @@ export default function Intro() {
           <BsLinkedin />
         </a>
         <a
-          className="flex items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
+          className="flex items-center gap-2 rounded-full borderBlack bg-white p-4 text-gray-700 outline-none transition duration-300 hover:scale-105 focus:scale-105 active:scale-95"
           href="https://github.com/notkoyo"
           target="_blank"
           title="GitHub"
