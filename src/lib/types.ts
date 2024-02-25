@@ -6,3 +6,5 @@ export type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
 };
+
+export type Theme = "light" | "dark";

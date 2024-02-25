@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
+import ThemeToggle from "@/components/theme-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +32,10 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-
-          <Toaster position="bottom-right" />
         </ActiveSectionContextProvider>
+
+        <ThemeToggle />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );
