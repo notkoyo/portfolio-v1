@@ -1,17 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import portrait from "../../public/portrait.jpeg";
 import { motion } from "framer-motion";
 import { SiReact, SiTypescript } from "react-icons/si";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section
+      ref={ref}
+      className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      id="home"
+    >
       <div className="flex items-center justify-center ">
         <div className="relative">
           <motion.div
@@ -52,7 +59,8 @@ export default function Intro() {
       >
         <span className="font-bold">Hi, I'm Kaiden.</span> I'm a{" "}
         <span className="font-bold">junior full-stack developer</span> from the{" "}
-        <span className="font-bold">UK</span>. I enjoy creating <span className="italic">beautifully</span>{" "}
+        <span className="font-bold">UK</span>. I enjoy creating{" "}
+        <span className="italic">beautifully</span>{" "}
         <span className="underline">responsive</span>{" "}
         <span className="italic">websites and apps</span>.
         <span className="flex items-center justify-center gap-4">
