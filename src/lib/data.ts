@@ -2,9 +2,25 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "../../public/corpcomment.png"
+import corpcommentImg from "../../public/corpcomment.png";
 import rmtdevImg from "../../public/rmtdev.png";
 import wordanalyticsImg from "../../public/wordanalytics.png";
+import {
+  HTMLIcon,
+  CSSIcon,
+  JSIcon,
+  TSIcon,
+  ReactIcon,
+  NextJSIcon,
+  NodeJSIcon,
+  GitIcon,
+  TailwindIcon,
+  BootstrapIcon,
+  SupabaseIcon,
+  ExpressIcon,
+  PSQLIcon,
+  FramerMotionIcon,
+} from "@/components/skill-icons";
 
 export const links = [
   {
@@ -20,8 +36,8 @@ export const links = [
     hash: "#projects",
   },
   {
-    name: "Skills",
-    hash: "#skills",
+    name: "Tech",
+    hash: "#tech",
   },
   {
     name: "Experience",
@@ -85,18 +101,18 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Bootstrap",
-  "Supabase",
-  "Express",
-  "PostgreSQL",
-  "Framer Motion",
+  { skillName: "HTML", skillIcon: React.createElement(HTMLIcon) },
+  { skillName: "CSS", skillIcon: React.createElement(CSSIcon) },
+  { skillName: "JavaScript", skillIcon: React.createElement(JSIcon) },
+  { skillName: "TypeScript", skillIcon: React.createElement(TSIcon) },
+  { skillName: "React", skillIcon: React.createElement(ReactIcon) },
+  { skillName: "Next.js", skillIcon: React.createElement(NextJSIcon) },
+  { skillName: "Node.js", skillIcon: React.createElement(NodeJSIcon) },
+  { skillName: "Git", skillIcon: React.createElement(GitIcon) },
+  { skillName: "Tailwind", skillIcon: React.createElement(TailwindIcon) },
+  { skillName: "Bootstrap", skillIcon: React.createElement(BootstrapIcon) },
+  { skillName: "Supabase", skillIcon: React.createElement(SupabaseIcon) },
+  { skillName: "Express", skillIcon: React.createElement(ExpressIcon) },
+  { skillName: "PostgreSQL", skillIcon: React.createElement(PSQLIcon) },
+  { skillName: "Framer Motion", skillIcon: React.createElement(FramerMotionIcon) },
 ] as const;
