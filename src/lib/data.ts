@@ -1,10 +1,11 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "../../public/corpcomment.png";
-import rmtdevImg from "../../public/rmtdev.png";
-import wordanalyticsImg from "../../public/wordanalytics.png";
+import { MdComputer } from "react-icons/md";
+import { BsBriefcase } from "react-icons/bs";
+import congregateImg from "../../public/congregateImg.png";
+import ncNewsAPIImg from "../../public/ncNewsAPIImg.png";
+import ncNewsImg from "../../public/ncNewsImg.png";
+import portfolioImg from "../../public/portfolioImg.png";
 import {
   HTMLIcon,
   CSSIcon,
@@ -20,6 +21,9 @@ import {
   ExpressIcon,
   PSQLIcon,
   FramerMotionIcon,
+  SQLIcon,
+  JestIcon,
+  NetlifyIcon,
 } from "@/components/skill-icons";
 
 export const links = [
@@ -51,52 +55,66 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated Northcoders Bootcamp",
+    location: "Manchester, England",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 13 weeks of intense studying. I'm currently looking for a position as a front-end or full-stack developer.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "November 2023 - February 2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    title: "Self Studying Programming",
+    location: "Manchester, England",
+    description: "I completed various HTML, CSS, Responsive Web Design, JS and React courses with Codecademy and FreeCodeCamp.",
+    icon: React.createElement(MdComputer),
+    date: "June 2023 - November 2023"
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "German Language Course",
+    location: "Berlin, Germany",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I completed a German language course at VICTORIA University in Berlin, where I achieved level B2 in German.",
+    icon: React.createElement(LuGraduationCap),
+    date: "October 2022 - August 2023",
+  },
+  {
+    title: "Bar Team Leader",
+    location: "Manchester, England",
+    description:
+      "I worked as a bar team lead, managing bar operations, mainting efficient inventory control and ensuring seamless service during events.",
+    icon: React.createElement(BsBriefcase),
+    date: "April 2019 - May 2022",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Portfolio Site",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "My portfolio site to showcase my projects, experience and get to know all about me!",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+    imageUrl: portfolioImg,
   },
   {
-    title: "rmtDev",
+    title: "Congregate",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A full-stack event creating and finding app, built as a group for my final project for Northcoders.",
+    tags: ["React", "Next.js", "Supabase", "Tailwind", "Framer Motion", "NextUI", "GoogleMaps API"],
+    imageUrl: congregateImg,
   },
   {
-    title: "Word Analytics",
+    title: "NC News API",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "An API built with Express and PSQL to serve user data and comments, hosted with Render.",
+    tags: ["Express", "PSQL", "CORS", "Render"],
+    imageUrl: ncNewsAPIImg,
+  },
+  {
+    title: "NC News",
+    description:
+      "Front-end project to visualise the data served by the NC News API, hosted with Netlify.",
+    tags: ["React", "JavaScript", "Axios", "Tailwind", "DaisyUI"],
+    imageUrl: ncNewsImg,
   },
 ] as const;
 
@@ -108,11 +126,14 @@ export const skillsData = [
   { skillName: "React", skillIcon: React.createElement(ReactIcon) },
   { skillName: "Next.js", skillIcon: React.createElement(NextJSIcon) },
   { skillName: "Node.js", skillIcon: React.createElement(NodeJSIcon) },
+  { skillName: "Jest", skillIcon: React.createElement(JestIcon) },
   { skillName: "Git", skillIcon: React.createElement(GitIcon) },
+  { skillName: "Netlify", skillIcon: React.createElement(NetlifyIcon) },
   { skillName: "Tailwind", skillIcon: React.createElement(TailwindIcon) },
   { skillName: "Bootstrap", skillIcon: React.createElement(BootstrapIcon) },
   { skillName: "Supabase", skillIcon: React.createElement(SupabaseIcon) },
   { skillName: "Express", skillIcon: React.createElement(ExpressIcon) },
   { skillName: "PostgreSQL", skillIcon: React.createElement(PSQLIcon) },
+  { skillName: "SQL", skillIcon: React.createElement(SQLIcon) },
   { skillName: "Framer Motion", skillIcon: React.createElement(FramerMotionIcon) },
 ] as const;
