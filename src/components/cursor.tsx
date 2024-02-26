@@ -22,7 +22,7 @@ export default function Cursor() {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
-  }, []); 
+  }, [cursorX, cursorY]); 
 
   return (
     <motion.div
