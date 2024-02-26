@@ -54,7 +54,7 @@ export default function Contact() {
           maxLength={100}
         />
         <textarea
-          className="borderBlack my-3 h-52 rounded-xl p-4 transition-all dark:bg-white dark:bg-opacity-80 outline-none dark:focus:bg-opacity-100 dark:text-gray-700"
+          className="borderBlack resize-none my-3 h-52 rounded-xl p-4 transition-all dark:bg-white dark:bg-opacity-80 outline-none dark:focus:bg-opacity-100 dark:text-gray-700"
           name="message"
           placeholder="Your message..."
           required
