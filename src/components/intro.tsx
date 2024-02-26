@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useEffect } from "react";
-import portrait from "../../public/portrait.jpeg";
+import portrait from "../../public/portrait.png";
 import { motion } from "framer-motion";
 import { SiReact, SiTypescript } from "react-icons/si";
 import Link from "next/link";

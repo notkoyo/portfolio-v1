@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/components/footer";
 import ThemeToggle from "@/components/theme-toggle";
 import ThemeContextProvider from "@/context/theme-context";
 
@@ -31,13 +29,10 @@ export default function RootLayout({
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Header />
             {children}
-            <Footer />
           </ActiveSectionContextProvider>
-
-          <ThemeToggle />
         </ThemeContextProvider>
+        
         <Toaster position="bottom-right" />
       </body>
     </html>

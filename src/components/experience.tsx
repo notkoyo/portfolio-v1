@@ -9,11 +9,10 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import { useInView } from "react-intersection-observer";
 import { useTheme } from "@/context/theme-context";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.3);
   const { theme } = useTheme();
 
   return (
@@ -21,13 +20,10 @@ export default function Experience() {
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, i) => {
-          const { ref, inView } = useInView({
-            triggerOnce: true,
-          });
           return (
-            <div key={i} ref={ref} className="vertical-timeline-element">
+            <div key={i} className="vertical-timeline-element">
               <VerticalTimelineElement
-                visible={inView}
+                visible
                 contentStyle={{
                   background:
                     theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
